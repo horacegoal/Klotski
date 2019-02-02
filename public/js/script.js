@@ -184,7 +184,7 @@ function win () {
     }
   }
   if(res.length === 8){
-    alert('you won!')
+    alert('good job!')
   }
 }
 
