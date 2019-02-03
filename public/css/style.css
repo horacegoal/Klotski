@@ -1,20 +1,31 @@
 .container{
-  width: 600px;
-  margin: 50px auto
+  /* width: 600px;
+  margin: 50px auto */
 }
 
 .game-area{
-  height: 600px;
-  width: 600px;
+  height: 300px;
+  width: 300px;
   border: 1px red solid;
   display: grid;
   grid-template-columns: auto auto auto;
-  position: relative;
+  position: absolute;
+  top: 50px;
+}
+
+.game-area2{
+  height: 300px;
+  width: 300px;
+  border: 1px red solid;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: absolute;
+  top: 50px;
 }
 
 .box{
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   background-color: blue;
   border: 1px yellow solid;
   text-align: center;
@@ -61,6 +72,47 @@
   left: 0px; */
 }
 #box8{
+  position: absolute;
+  /* top: 400px;
+  left: 200px; */
+}
+
+#box1a{
+  position: absolute;
+  /* top: 0px;
+  left: 0px; */
+}
+#box2a{
+  position: absolute;
+  /* top: 0px;
+  left: 200px; */
+}
+ #box3a{
+  position: absolute;
+  /* top: 0px;
+  left: 400px; */
+}
+#box4a{
+  position: absolute;
+  /* top: 200px;
+  left: 0px; */
+}
+#box5a{
+  position: absolute;
+  /* top: 200px;
+  left: 200px; */
+}
+#box6a{
+  position: absolute;
+  /* top: 200px;
+  left: 400px; */
+}
+#box7a{
+  position: absolute;
+  /* top: 400px;
+  left: 0px; */
+}
+#box8a{
   position: absolute;
   /* top: 400px;
   left: 200px; */
