@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/play.css">
+    <title>Klotski</title>
+  </head>
+<body>
+  <div class="container">
+    <div class="playerList">
+      <h3>Players</h3>
+      <ol id="players"></ol>
+    </div>
+    <div class="game">
+      <div class="game-area">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5</div>
+        <div class="box" id="box6">6</div>
+        <div class="box" id="box7">7</div>
+        <div class="box" id="box8">8</div>
+      </div>
+      <div class="game-area2">
+        <div class="box" id="box1a">1</div>
+        <div class="box" id="box2a">2</div>
+        <div class="box" id="box3a">3</div>
+        <div class="box" id="box4a">4</div>
+        <div class="box" id="box5a">5</div>
+        <div class="box" id="box6a">6</div>
+        <div class="box" id="box7a">7</div>
+        <div class="box" id="box8a">8</div>
+      </div>
+    </div>
+
+    <div class="chat__main">
+
+        <ol id="messages" class="chat__messages"></ol>
+
+      <div class="chat__footer">
+        <input id="textbox" type="text">
+        <button>SEND</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/template" id="message-template">
+    <li >
+      {{from}}  {{createAt}}  {{text}}
+    </li>
+  </script>
+  <script type="text/javascript" src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="./js/libs/moment.js"></script>
+  <script type="text/javascript" src="./js/libs/mustache.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="./js/libs/deparam.js"></script>
+  <script type="text/javascript" src="./js/randomBox.js"></script>
+  <script type="text/javascript" src="./js/utils/player1Win.js"></script>
+  <script type="text/javascript" src="./js/utils/player2Win.js"></script>
+  <script type="text/javascript" src="./js/player1Move.js"></script>
+  <script type="text/javascript" src="./js/player2Move.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+</html>

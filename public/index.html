@@ -4,41 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Klotski</title>
+  <link rel="stylesheet" href="./css/join.css">
+  <title>Join</title>
 </head>
 <body>
   <div class="container">
-    <div class="game-area">
-      <div class="box" id="box1">1</div>
-      <div class="box" id="box2">2</div>
-      <div class="box" id="box3">3</div>
-      <div class="box" id="box4">4</div>
-      <div class="box" id="box5">5</div>
-      <div class="box" id="box6">6</div>
-      <div class="box" id="box7">7</div>
-      <div class="box" id="box8">8</div>
-    </div>
-    <div class="game-area2">
-      <div class="box" id="box1a">1</div>
-      <div class="box" id="box2a">2</div>
-      <div class="box" id="box3a">3</div>
-      <div class="box" id="box4a">4</div>
-      <div class="box" id="box5a">5</div>
-      <div class="box" id="box6a">6</div>
-      <div class="box" id="box7a">7</div>
-      <div class="box" id="box8a">8</div>
-    </div>
+    <form class="form" action="play.html">
+      <label for="name">Display Name</label><br>
+      <input type="text" name="name">  <br>
+      <label for="room">Room</label><br>
+      <input type="text" name="room"><br>
+      <button>submit</button>
+    </form>
+
   </div>
-
-
-  <script type="text/javascript" src="./js/libs/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="./js/libs/jquery-ui-1.12.1/jquery-ui.js"></script>
-  <script type="text/javascript" src="./js/randomBox.js"></script>
-  <!-- <script type="text/javascript" src="./js/utils/bubbleSort.js"></script> -->
-  <script type="text/javascript" src="./js/player1.js"></script>
-  <script type="text/javascript" src="./js/player2.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
-
 </body>
 </html>
