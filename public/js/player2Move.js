@@ -8,61 +8,63 @@ function player2Move () {
 
   $('html').keydown(function(e){
     e.stopImmediatePropagation();
-    if(e.key == "ArrowUp"){
-      for(let i = 1; i <= 8; i++){
-        let box = $(`#box${i}a`);
-        let pos = box.position();
-        let emptyPos = getEmptyPosition()
-        if(pos.top - 100 === emptyPos.top && pos.left === emptyPos.left){
-          let top = pos.top;
-          // box.css("top", top - 100)
-          let moveObject = {boxNumber: i, from: "top", pos: top, move: -100};
-          socket.emit('player2Move', moveObject)
-          break;
-        }
-      }
-    }
-    if(e.key == "ArrowDown"){
-      for(let i = 1; i <= 8; i++){
-        let box = $(`#box${i}a`);
-        let pos = box.position();
-        let emptyPos = getEmptyPosition()
-          if(pos.top + 100 === emptyPos.top && pos.left === emptyPos.left){
+    if(playable2){
+      if(e.key == "ArrowUp"){
+        for(let i = 1; i <= 8; i++){
+          let box = $(`#box${i}a`);
+          let pos = box.position();
+          let emptyPos = getEmptyPosition()
+          if(pos.top - 100 === emptyPos.top && pos.left === emptyPos.left){
             let top = pos.top;
-            // box.css("top", top + 100)
-            let moveObject = {boxNumber: i, from: "top", pos: top, move: 100};
+            // box.css("top", top - 100)
+            let moveObject = {boxNumber: i, from: "top", pos: top, move: -100};
             socket.emit('player2Move', moveObject)
             break;
+          }
+        }
+      }
+      if(e.key == "ArrowDown"){
+        for(let i = 1; i <= 8; i++){
+          let box = $(`#box${i}a`);
+          let pos = box.position();
+          let emptyPos = getEmptyPosition()
+            if(pos.top + 100 === emptyPos.top && pos.left === emptyPos.left){
+              let top = pos.top;
+              // box.css("top", top + 100)
+              let moveObject = {boxNumber: i, from: "top", pos: top, move: 100};
+              socket.emit('player2Move', moveObject)
+              break;
+            }
+        }
+      }
+      if(e.key == "ArrowLeft"){
+          for(let i = 1; i <= 8; i++){
+            let box = $(`#box${i}a`);
+            let pos = box.position();
+            let emptyPos = getEmptyPosition()
+            if(pos.left - 100 === emptyPos.left && pos.top === emptyPos.top){
+              let left = pos.left;
+              // box.css("left", left - 100)
+              let moveObject = {boxNumber: i, from: "left", pos: left, move: -100};
+              socket.emit('player2Move', moveObject)
+              break;
+            }
           }
       }
-    }
-    if(e.key == "ArrowLeft"){
-        for(let i = 1; i <= 8; i++){
-          let box = $(`#box${i}a`);
-          let pos = box.position();
-          let emptyPos = getEmptyPosition()
-          if(pos.left - 100 === emptyPos.left && pos.top === emptyPos.top){
-            let left = pos.left;
-            // box.css("left", left - 100)
-            let moveObject = {boxNumber: i, from: "left", pos: left, move: -100};
-            socket.emit('player2Move', moveObject)
-            break;
+      if(e.key == "ArrowRight"){
+          for(let i = 1; i <= 8; i++){
+            let box = $(`#box${i}a`);
+            let pos = box.position();
+            let emptyPos = getEmptyPosition()
+            if(pos.left + 100 === emptyPos.left && pos.top === emptyPos.top){
+              let left = pos.left;
+              // box.css("left", left + 100)
+              let moveObject = {boxNumber: i, from: "left", pos: left, move: 100};
+              socket.emit('player2Move', moveObject)
+              break;
+            }
           }
-        }
-    }
-    if(e.key == "ArrowRight"){
-        for(let i = 1; i <= 8; i++){
-          let box = $(`#box${i}a`);
-          let pos = box.position();
-          let emptyPos = getEmptyPosition()
-          if(pos.left + 100 === emptyPos.left && pos.top === emptyPos.top){
-            let left = pos.left;
-            // box.css("left", left + 100)
-            let moveObject = {boxNumber: i, from: "left", pos: left, move: 100};
-            socket.emit('player2Move', moveObject)
-            break;
-          }
-        }
+      }
     }
   });
 

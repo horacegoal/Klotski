@@ -7,7 +7,8 @@ function player1Win () {
     }
   }
   if(res.length === 8){
-    alert('Player 1 wins')
+    // alert('Player 1 wins')
+    return true;
   }
 
   function getOccupiedPosition () {
