@@ -57,7 +57,6 @@ var timer2 = function (room) {
 app.use(express.static(publicPath));
 
 io.on('connection', (socket) => {
-  console.log('server connected')
   socket.on('join', (params, callback) => {
     if(!isRealString(params.name) || !isRealString(params.room)){
       return callback('Display name or room name invalid')
@@ -279,5 +278,4 @@ io.on('connection', (socket) => {
 
 
 server.listen(port, () => {
-  console.log(`The app is on port ${port}`)
 })

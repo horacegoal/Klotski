@@ -19,7 +19,6 @@ function scrollToBottom () {
 
 
 socket.on('connect', function () {
-  console.log('server connected')
 
   var param = $.deparam(window.location.search);
   socket.emit('join', param, function (err) {
@@ -27,7 +26,6 @@ socket.on('connect', function () {
       alert(err)
       window.location.href = '/';
     }else{
-      console.log('join success')
     }
   })
 })
@@ -194,7 +192,6 @@ socket.on('newMessage', function (message) {
 
   player2Move()
   socket.on('SecondPlayerMove', function(move){
-    console.log(move)
     $(`#box${move.boxNumber}a`).css(move.from, move.pos + move.move)
     let win = player2Win();
     if(win){
