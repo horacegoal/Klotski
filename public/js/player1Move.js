@@ -76,6 +76,7 @@ function player1Move () {
     for(let i = 1; i <= 8; i++){
       let box = $(`#box${i}`);
       let pos = box.position();
+      // console.log(pos)
       occupiedPos.push(pos)
     }
     return occupiedPos;

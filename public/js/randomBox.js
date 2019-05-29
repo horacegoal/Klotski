@@ -26,7 +26,7 @@ function setRandomBox() {
     }
     getOrder();
     bubbleSort(orders);
-    console.log(countForBubbleSort)
+    // console.log(countForBubbleSort)
   }
 
 

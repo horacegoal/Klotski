@@ -7,6 +7,8 @@
 
 .container{
   background-color: rgb(1, 127, 141);
+  position: absolute;
+  display: block;
   width: 100vw;
   height: 100vh;
 }
@@ -14,10 +16,7 @@
 .game{
   height: 400px;
   width: 1100px;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 30px auto 0;
   background-color: rgb(5, 81, 105);
 }
 .player-names{
@@ -57,11 +56,10 @@
 }
 
 #reset{
-  position: absolute;
+  /* position: absolute; */
   height: 30px;
   width: 40px;
-  left: 1%;
-  bottom :1%;
+  margin: 5px;
 }
 
 #red{
@@ -111,7 +109,7 @@
 }
 
 .record-title{
-  border-bottom: 1px solid black
+  /* border-bottom: 1px solid black */
 }
 
 #record1{
@@ -119,7 +117,7 @@
 }
 #record2{
   /* position: absolute; */
-  left: 900px;
+  margin-left: 900px
 }
 
 .playerList{
@@ -264,10 +262,14 @@
   width: 500px;
   height: 200px;
   border: 1px solid black;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 10px auto 0;
+  /* position: relative; */
+  /* display: block; */
+  /* margin: 0px auto; */
+  /* position: absolute; */
+  /* bottom: 20px; */
+  /* left: 50%;
+  transform: translateX(-50%); */
   background-color: rgb(225, 126, 35);
 }
 
